@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity() {
         var request = Request.Builder()
             .url("https://weatherapi-com.p.rapidapi.com/forecast.json?q=${city}&days=5")
             .get()
-            .addHeader("X-RapidAPI-Key", "4676d6db05msh5a86808a602fe1dp177e55jsn3c38c37d7b03")
+            .addHeader("X-RapidAPI-Key", "your_api_key")
             .addHeader("X-RapidAPI-Host", "weatherapi-com.p.rapidapi.com")
             .build()
 
@@ -88,7 +88,7 @@ class MainActivity : AppCompatActivity() {
             var request2 = Request.Builder()
                 .url(apiurl)
                 .get()
-                .addHeader("X-RapidAPI-Key", "4676d6db05msh5a86808a602fe1dp177e55jsn3c38c37d7b03")
+                .addHeader("X-RapidAPI-Key", "your_api_key")
                 .addHeader("X-RapidAPI-Host", "weatherapi-com.p.rapidapi.com")
                 .build()
 
