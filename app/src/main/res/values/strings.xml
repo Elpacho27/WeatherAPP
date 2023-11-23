@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Weather</string>
+    <string name="emojiname">EmojiName</string>
+    <string name="currenttemp">15</string>
+    <string name="feelslike">Feels Like</string>
+    <string name="lastupdate">Last Update</string>
+    <string name="humidity">Humidity</string>
+    <string name="windspeed">Wind</string>
+    <string name="dayname">Day</string>
+    <string name="daytemp">Temp</string>
+    <string name="icon">Icon</string>
+    <string name="emoji">Emoji</string>
+    <string name="city">Grad</string>
+    <string name="gradedit">Unesite ime grada</string>
+    <string name="getbutton">Dohvati</string>
+
+
+
 </resources>

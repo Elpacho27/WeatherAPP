@@ -19,9 +19,9 @@ class HourlyWeatherAdapter(private val hourlyWeatherlist:ArrayList<HourlyWeather
 
     override fun onBindViewHolder(holder: HourlyWeatherViewHolder, position: Int) {
         val hourlyWeather =hourlyWeatherlist[position]
-        holder.time.text = hourlyWeather.time
+        holder.time.text = hourlyWeather.temp
         holder.loadWeatherIcon(hourlyWeather.image)
-        holder.tempcard.text=hourlyWeather.temp
+        holder.tempcard.text=hourlyWeather.time
 
 
 

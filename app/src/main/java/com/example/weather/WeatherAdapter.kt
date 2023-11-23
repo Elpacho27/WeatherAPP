@@ -13,6 +13,7 @@ import okhttp3.internal.trimSubstring
 import java.io.IOException
 import java.util.ArrayList
 import java.util.Calendar
+import java.util.Date
 
 class WeatherAdapter(val weatherdata: WeatherData) {
 
@@ -89,6 +90,10 @@ class WeatherAdapter(val weatherdata: WeatherData) {
         return hourly
 
 
+    }
+    fun getLastUpdate():String{
+        val lastupdate=weatherdata.current.last_updated
+        return lastupdate
     }
 
 

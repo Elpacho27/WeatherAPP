@@ -5,6 +5,8 @@
     android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E6D1D1"
+    android:backgroundTint="#69CAF6"
     tools:context=".MainActivity">
 
 
@@ -13,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:background="#FFFFFF"
-        android:backgroundTint="#FFFFFF"
+        android:backgroundTint="#69CAF6"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +26,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:cardBackgroundColor="#E4FF81"
+            app:cardBackgroundColor="#A5E3FF"
             app:cardCornerRadius="30dp"
             app:cardElevation="10dp">
 
@@ -42,7 +44,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="TextView"
+                    android:text="@string/dayname"
+                    android:textColor="@color/white"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -52,6 +55,7 @@
                     android:id="@+id/todayforimage"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
+                    android:contentDescription="@string/icon"
                     android:layout_marginTop="52dp"
                     android:src="@drawable/ic_launcher_background"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -63,7 +67,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="TextView"
+
+                    android:text="@string/daytemp"
+                    android:textColor="@color/white"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -76,7 +82,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="#E4FF81"
+            android:backgroundTint="#A5E3FF"
             app:cardCornerRadius="30dp"
             app:cardElevation="10dp">
 
@@ -94,7 +100,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="TextView"
+                    android:text="@string/dayname"
+                    android:textColor="@color/white"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -105,6 +112,7 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="52dp"
+                    android:contentDescription="@string/icon"
                     android:src="@drawable/ic_launcher_background"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -115,8 +123,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="TextView"
-                    android:textStyle="bold"
+                    android:text="@string/daytemp"
+                    android:textColor="@color/white"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/day2image" />
@@ -127,7 +135,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="#E4FF81"
+            android:backgroundTint="#A5E3FF"
             app:cardCornerRadius="30dp"
             app:cardElevation="10dp">
 
@@ -144,7 +152,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="TextView"
+                    android:text="@string/dayname"
+                    android:textColor="@color/white"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.493"
@@ -156,6 +165,7 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="52dp"
+                    android:contentDescription="@string/icon"
                     android:src="@drawable/ic_launcher_background"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -166,7 +176,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="TextView"
+                    android:text="@string/daytemp"
+                    android:textColor="@color/white"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -184,7 +195,7 @@
         android:layout_marginTop="12dp"
 
         android:background="#FFFFFF"
-        android:backgroundTint="#FFFFFF"
+        android:backgroundTint="#69CAF6"
         app:layout_constraintEnd_toEndOf="parent"
 
         app:layout_constraintStart_toStartOf="parent"
@@ -193,7 +204,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:cardBackgroundColor="#E4FF81"
+            app:cardBackgroundColor="#A5E3FF"
             app:cardCornerRadius="30dp"
             app:cardElevation="10dp"
 
@@ -201,7 +212,34 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:contextClickable="true">
+
+                <ImageView
+                    android:id="@+id/emojipic"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="@string/emoji"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginEnd="7dp"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintEnd_toStartOf="@+id/humiditytext"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/currenttemp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/lastupdatetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/lastupdate"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.351"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/feelsliketext" />
 
                 <TextView
                     android:id="@+id/currenttemp"
@@ -210,8 +248,9 @@
                     android:layout_marginTop="28dp"
                     android:fontFamily="@font/aladin"
                     android:padding="10dp"
-                    android:text="15"
+                    android:text="@string/currenttemp"
                     android:textAlignment="center"
+                    android:textColor="#F6F6F6"
                     android:textSize="30dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.345"
@@ -221,6 +260,7 @@
                 <ImageView
                     android:id="@+id/todayimage"
                     android:layout_width="72dp"
+                    android:contentDescription="@string/icon"
                     android:layout_height="58dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="28dp"
@@ -234,8 +274,9 @@
                     android:layout_height="20dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="sans-serif"
-                    android:text="TextView"
+                    android:text="@string/feelslike"
                     android:textAlignment="center"
+                    android:textColor="@color/white"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.316"
@@ -249,8 +290,9 @@
                     android:layout_marginStart="216dp"
                     android:layout_marginTop="76dp"
                     android:fontFamily="sans-serif"
-                    android:text="TextView"
+                    android:text="@string/windspeed"
                     android:textAlignment="center"
+                    android:textColor="@color/white"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -260,6 +302,7 @@
                     android:layout_width="27dp"
                     android:layout_height="35dp"
                     android:layout_marginTop="28dp"
+                    android:contentDescription="@string/humidity"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.294"
                     app:layout_constraintStart_toEndOf="@+id/humiditytext"
@@ -271,11 +314,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="28dp"
-                    android:layout_marginTop="36dp"
-                    android:text="TextView"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/humidity"
+                    android:textColor="@color/white"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.131"
+                    app:layout_constraintHorizontal_bias="0.201"
                     app:layout_constraintStart_toEndOf="@+id/currenttemp"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -285,18 +329,17 @@
 
     <TextView
         android:id="@+id/cityname"
-        android:layout_width="204dp"
-        android:layout_height="71dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="185dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="35dp"
         android:fontFamily="@font/aladin"
-        android:text="TextView"
+        android:text="@string/city"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -311,7 +354,7 @@
 
         <View
             android:id="@+id/divider"
-            android:layout_width="1dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="?android:attr/listDivider" />
@@ -320,35 +363,46 @@
             android:id="@+id/horizontalrv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbars="horizontal"
-            />
+            android:scrollbars="horizontal" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:orientation="vertical"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="412dp"
+        android:layout_height="174dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="223dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="36dp"
+            android:hint="@string/gradedit"
+            android:autofillHints="addressCity"
+            android:textColor="@color/white"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <EditText
-                android:id="@+id/edit2"
-                android:layout_width="267dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="44dp"
-                android:hint="Grad"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </LinearLayout>
+        <Button
+            android:id="@+id/button"
+            android:layout_width="115dp"
+            android:layout_height="53dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#A5E3FF"
+            android:text="@string/getbutton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
